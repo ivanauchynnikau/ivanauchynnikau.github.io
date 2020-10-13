@@ -1,0 +1,31 @@
+body {
+  min-width: 360px;
+  font-size: 22px;
+  font-family: "Nunito", Arial, serif;
+  color: #3f3f3f;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
