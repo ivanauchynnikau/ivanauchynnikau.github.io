@@ -1,0 +1,42 @@
+.main {
+  width: 65%;
+  padding: 40px 0;
+  padding-right: 60px;
+
+  &__title {
+    font-size: 26px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__block {
+    & + & {
+      margin-top: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    padding-left: 15px;
+    
+    &:after {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background: #3f3f3f;
+      margin: auto;
+    }
+
+    & + & {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const { NODE_ENV } = process.env.NODE_ENV;
@@ -13,7 +13,7 @@ const pages = [
   'index',
 ];
 
-const buildFolderName = 'public_path';
+const buildFolderName = 'build';
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -71,15 +71,6 @@ module.exports = {
           },
         }],
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-          },
-        }],
-      },
     ],
   },
   externals: {
@@ -106,15 +97,18 @@ pages.forEach((pageName) => {
 switch (NODE_ENV) {
   // plugins for development mode
   case 'development':
-    module.exports.plugins.push(new HtmlWebpackHarddiskPlugin());
+    module.exports.plugins.push(
+      new HtmlWebpackHarddiskPlugin(),
+      new WebpackBuildNotifierPlugin({title: 'my CV'}),
+      )
     break;
 
-  // plugins for production mode
   case 'production':
+    // plugins for production mode
     module.exports.plugins.push(
       new UglifyJSPlugin(),
+      new MiniCssExtractPlugin(),
       new HtmlWebpackInlineSourcePlugin(),
-      new HtmlMinifierPlugin(),
     );
     break;
 

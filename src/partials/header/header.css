@@ -1,4 +1,15 @@
 .header {
-  background: purple;
-  padding: 40px 0;
+  background: #efefef;
+  padding: 20px 0;
+
+  &__name {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  &__job-title {
+    font-size: 26px;
+    line-height: 30px;
+  }
 }

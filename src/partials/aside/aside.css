@@ -1,0 +1,29 @@
+.aside {
+  width: 35%;
+  padding: 40px 15px;
+
+  &__block {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+    padding-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
