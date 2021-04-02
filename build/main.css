@@ -1,6 +1,13 @@
-.footer {
-  background: wheat;
-  padding: 40px 0; }
+.header {
+  background: #efefef;
+  padding: 20px 0; }
+  .header__name {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 10px; }
+  .header__job-title {
+    font-size: 26px;
+    line-height: 30px; }
 body {
   min-width: 360px;
   font-size: 22px;
@@ -166,16 +173,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-.header {
-  background: #efefef;
-  padding: 20px 0; }
-  .header__name {
-    font-size: 32px;
-    line-height: 36px;
-    margin-bottom: 10px; }
-  .header__job-title {
-    font-size: 26px;
-    line-height: 30px; }
 .main {
   width: 65%;
   padding: 40px 0;
