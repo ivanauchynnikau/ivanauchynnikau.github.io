@@ -1,103 +1,672 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Software engineer. Ivan Auchynnikau.</title>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Auchynnikau — Senior Software Engineer</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            padding: 50px 60px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 25px 20px; }
+        }
 
-<link href="main.css" rel="stylesheet"></head>
-<body>
-	<header class="header">
-	<div class="container">
-		<div class="header__name">Ivan Auchynnikau</div>
-		<div class="header__job-title">Software engineer</div>
-	</div>
-</header>
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #e8edf2;
+            padding-bottom: 28px;
+            margin-bottom: 28px;
+        }
+        .header-left h1 {
+            font-size: 2.6em;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #0a0a1a;
+            margin-bottom: 2px;
+        }
+        .header-left .title {
+            font-size: 1.3em;
+            color: #2563eb;
+            font-weight: 500;
+        }
+        .header-left .exp {
+            font-size: 0.95em;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        .header-right {
+            text-align: right;
+            margin-top: 4px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+        .header-right .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+        .header-right a {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-size: 0.95em;
+            display: inline-block;
+        }
+        .header-right a:hover { color: #2563eb; }
+        .header-right .contact-label {
+            font-size: 0.7em;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 2px;
+            width: 100%;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: #f1f5f9;
+            border-radius: 24px;
+            padding: 4px;
+            margin-left: 16px;
+        }
+        .lang-switch button {
+            border: none;
+            background: transparent;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-switch button.active {
+            background: #2563eb;
+            color: #fff;
+        }
+        .lang-switch button:hover:not(.active) {
+            background: #e2e8f0;
+        }
+        @media (max-width: 600px) {
+            .header { flex-direction: column; }
+            .header-right { text-align: left; margin-top: 12px; flex-direction: column; align-items: flex-start; }
+            .lang-switch { margin-left: 0; margin-top: 8px; }
+        }
 
-	<div class="container">
-		<div class="content">
-			<main class="main">
-	<div class="main__block">
-		<div class="main__title">
-			About me:
-		</div>
-		<div class="main__text">
-			6+ years of professional experience in Software Industry.
-		</div>
-		<div class="main__text">
-			Involved in implementation of a variety of web applications in various domains.
-		</div>
-		<div class="main__text">
-			Ability to participate in individual or team software development process.
-		</div>
-		<div class="main__text">
-			More than 20 projects finished.
-		</div>
-		<div class="main__text">
-			Has experience in dedicated team work.
-		</div>
-	</div>
-</main>
-			<aside class="aside">
-	<div class="aside__title">
-		Personal info
-	</div>
-	<div class="aside__block">
-		<div class="aside__subtitle">
-			Email:
-		</div>
-		<div class="aside__text">
-			<a href="mailto:ivanauchynnikau@gmail.com" target="_blank">
-				ivanauchynnikau@gmail.com
-			</a>
-		</div>
-	</div>
-	<div class="aside__block">
-		<div class="aside__subtitle">
-			GitHub
-		</div>
-		<div class="aside__text">
-			<a href="https://github.com/ivanauchynnikau" target="_blank">
-				github.com/ivanauchynnikau
-			</a>
-		</div>
-	</div>
-	<div class="aside__block">
-		<div class="aside__subtitle">
-			LinkedIn:
-		</div>
-		<div class="aside__text">
-			<a href="https://www.linkedin.com/in/ivan-auchynnikau-b6379594/" target="_blank">
-				ivan-auchynnikau
-			</a>
-		</div>
-	</div>
-	<div class="aside__block">
-		<div class="aside__subtitle">
-			Skype:
-		</div>
-		<div class="aside__text">
-			<a href="skype:ivan.auchynnikau" target="_blank">
-				ivan.auchynnikau
-			</a>
-		</div>
-	</div>
+        /* ===== SECTIONS ===== */
+        h2 {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #0a0a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e8edf2;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 18px;
+        }
+        h2:first-of-type { margin-top: 0; }
 
-	<div class="aside__block">
-		<div class="aside__subtitle">
-			Phone:
-		</div>
-		<div class="aside__text">
-			<a href="tel:+375296729095" target="_blank">
-				+375(29)6729095
-			</a>
-		</div>
-	</div>
+        .summary {
+            font-size: 1.05em;
+            color: #2d3748;
+            background: #f7f9fc;
+            padding: 18px 24px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            margin-bottom: 6px;
+        }
+        .summary strong { color: #0a0a1a; }
 
+        /* ===== SKILLS ===== */
+        .skills-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 40px;
+            margin-top: 4px;
+        }
+        @media (max-width: 600px) {
+            .skills-section { grid-template-columns: 1fr; }
+        }
+        .skill-group h3 {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #64748b;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .skill-group .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 8px;
+        }
+        .skill-group .tags span {
+            background: #eef2f6;
+            padding: 3px 12px;
+            border-radius: 16px;
+            font-size: 0.8em;
+            color: #1e293b;
+            font-weight: 500;
+        }
+        .skill-group .tags .core {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+        .skill-group .tags .new {
+            background: #dcfce7;
+            color: #15803d;
+        }
 
-</aside>
-		</div>
-	</div>
-<script type="text/javascript" src="main.js"></script></body>
+        /* ===== PROJECT / EXPERIENCE ===== */
+        .project {
+            margin-bottom: 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .project:last-child { border-bottom: none; margin-bottom: 0; }
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .project-name {
+            font-weight: 700;
+            font-size: 1.05em;
+            color: #0a0a1a;
+        }
+        .project-name a {
+            color: #0a0a1a;
+            text-decoration: none;
+        }
+        .project-name a:hover { color: #2563eb; }
+        .project-role {
+            font-weight: 500;
+            color: #2563eb;
+            font-size: 0.9em;
+        }
+        .project-period {
+            font-size: 0.8em;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 8px;
+            margin: 6px 0 8px 0;
+        }
+        .project-stack span {
+            background: #f1f5f9;
+            font-size: 0.7em;
+            padding: 2px 10px;
+            border-radius: 12px;
+            color: #475569;
+            font-weight: 500;
+        }
+        .project-stack .highlight-stack {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+        .project-desc {
+            color: #2d3748;
+            font-size: 0.95em;
+        }
+        .project-desc ul {
+            list-style: none;
+            padding-left: 4px;
+            margin-top: 4px;
+        }
+        .project-desc li {
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 2px;
+        }
+        .project-desc li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .contact-bar {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid #e8edf2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 40px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+        }
+        .contact-bar a {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .contact-bar a:hover { color: #2563eb; }
+        .contact-bar .btn {
+            background: #0a0a1a;
+            color: #fff !important;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .contact-bar .btn:hover {
+            background: #1a1a3e;
+            color: #fff !important;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.75em;
+            color: #94a3b8;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid #edf2f7;
+        }
+
+        /* ===== LANGUAGE-SPECIFIC ===== */
+        .lang-ru { display: block; }
+        .lang-en { display: none; }
+        body.lang-en .lang-ru { display: none; }
+        body.lang-en .lang-en { display: block; }
+        body.lang-ru .lang-ru { display: block; }
+        body.lang-ru .lang-en { display: none; }
+    </style>
+</head>
+<body class="lang-ru">
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <div class="header">
+        <div class="header-left">
+            <h1>Ivan Auchynnikau</h1>
+            <div class="title lang-ru">Senior Software Engineer</div>
+            <div class="title lang-en">Senior Software Engineer</div>
+            <div class="exp lang-ru">10+ лет во фронтенд-разработке · Архитектура · React Native</div>
+            <div class="exp lang-en">10+ years in frontend development · Architecture · React Native</div>
+        </div>
+        <div class="header-right">
+            <div class="contact-label">Связаться / Contact</div>
+            <div class="contacts">
+                <a href="mailto:ivanauchynnikau@gmail.com">✉️ Email</a>
+                <a href="https://t.me/ivanobivan" target="_blank">💬 Telegram</a>
+            </div>
+            <div class="lang-switch">
+                <button class="active" data-lang="ru">РУ</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PROFESSIONAL SUMMARY ===== -->
+    <h2 class="lang-ru">Обо мне</h2>
+    <h2 class="lang-en">Professional Summary</h2>
+    <div class="summary lang-ru">
+        Senior-разработчик с <strong>10+ годами коммерческого опыта</strong> в создании сложных веб- и мобильных приложений.
+        Специализируюсь на <strong>React, TypeScript, Next.js, React Native и Node.js</strong>.
+        Имею опыт руководства командами, проектирования архитектуры и вывода продуктов от идеи до продакшена.
+        Уделяю особое внимание чистому коду, оптимизации производительности и <strong>Spec-Driven Development</strong>.
+        <br><br>
+        <strong>Английский язык:</strong> Intermediate (B1) · письменный и устный.
+    </div>
+    <div class="summary lang-en">
+        Senior Software Engineer with <strong>10+ years of commercial experience</strong> building complex web and mobile applications.
+        Specializing in <strong>React, TypeScript, Next.js, React Native, and Node.js</strong>.
+        Proven track record of leading teams, architecting solutions, and delivering scalable products from concept to production.
+        Passionate about clean code, performance optimization, and <strong>Spec-Driven Development</strong>.
+        <br><br>
+        <strong>English:</strong> Intermediate (B1) · written and spoken.
+    </div>
+
+    <!-- ===== SKILLS ===== -->
+    <h2 class="lang-ru">Технологии</h2>
+    <h2 class="lang-en">Technical Skills</h2>
+    <div class="skills-section">
+        <div class="skill-group">
+            <h3 class="lang-ru">Основные</h3>
+            <h3 class="lang-en">Core</h3>
+            <div class="tags">
+                <span class="core">React / Redux</span>
+                <span class="core">TypeScript</span>
+                <span class="core">Next.js</span>
+                <span class="core">React Native / Expo</span>
+                <span class="core">Node.js / NestJS</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3 class="lang-ru">Веб и мобильные</h3>
+            <h3 class="lang-en">Web & Mobile</h3>
+            <div class="tags">
+                <span>GraphQL</span>
+                <span>REST API</span>
+                <span>JavaScript (ES6+)</span>
+                <span>HTML5 / CSS3 / SCSS</span>
+                <span>Webpack / Vite</span>
+                <span>Expo Router</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3 class="lang-ru">Бэкенд и инфраструктура</h3>
+            <h3 class="lang-en">Backend & Infrastructure</h3>
+            <div class="tags">
+                <span>Node.js</span>
+                <span>PostgreSQL / MySQL</span>
+                <span>AWS (S3, EC2, CloudFront)</span>
+                <span>Vercel</span>
+                <span>Docker</span>
+                <span>Git (GitHub / GitLab / Bitbucket)</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3 class="lang-ru">Методологии и инструменты</h3>
+            <h3 class="lang-en">Methodologies & Tools</h3>
+            <div class="tags">
+                <span class="new">OpenSpec / SDD</span>
+                <span>Figma / Photoshop</span>
+                <span>Jira / Trello</span>
+                <span class="new">AI Tools (Cursor, ChatGPT)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== KEY ACHIEVEMENTS ===== -->
+    <h2 class="lang-ru">Ключевые достижения</h2>
+    <h2 class="lang-en">Key Achievements</h2>
+    <div class="summary" style="border-left-color: #f59e0b; background: #fffbeb;">
+        <ul style="list-style: none; padding-left: 0; margin: 0;">
+            <li class="lang-ru">🏆 <strong>Руководил командами разработчиков</strong> — сдал в продакшен 5+ приложений</li>
+            <li class="lang-en">🏆 <strong>Led teams of developers</strong> — delivered 5+ production-grade applications</li>
+            <li class="lang-ru">🏆 <strong>Проектировал архитектуру</strong> клиент-серверных приложений с акцентом на масштабируемость и производительность</li>
+            <li class="lang-en">🏆 <strong>Architected client-server</strong> applications with focus on scalability and performance</li>
+            <li class="lang-ru">🏆 <strong>Оптимизировал производительность</strong> — сократил размер бандла на 30%+</li>
+            <li class="lang-en">🏆 <strong>Optimized performance</strong> — reduced bundle size by 30%+</li>
+            <li class="lang-ru">🏆 <strong>Интегрировал платёжные системы</strong> — Braintree, PayPal, Apple Pay</li>
+            <li class="lang-en">🏆 <strong>Integrated payment systems</strong> — Braintree, PayPal, Apple Pay</li>
+            <li class="lang-ru">🏆 <strong>Внедрил Spec-Driven Development</strong> (OpenSpec) — связка продукта и инженерии</li>
+            <li class="lang-en">🏆 <strong>Pioneered Spec-Driven Development</strong> (OpenSpec) — bridging product and engineering</li>
+            <li class="lang-ru">🏆 <strong>Разработал AI-функции</strong> — генератор заданий на основе OpenAI</li>
+            <li class="lang-en">🏆 <strong>Built AI-powered features</strong> — activity generator using OpenAI instructions</li>
+        </ul>
+    </div>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <h2 class="lang-ru">Опыт работы</h2>
+    <h2 class="lang-en">Professional Experience</h2>
+
+    <!-- CoachEye -->
+    <div class="project">
+        <div class="project-header">
+            <div>
+                <span class="project-name">CoachEye</span>
+                <span class="project-role"> · Senior Mobile Engineer</span>
+            </div>
+            <span class="project-period">Янв 2025 – наст. время / Jan 2025 – Present</span>
+        </div>
+        <div class="project-stack">
+            <span class="highlight-stack">React Native / Expo</span>
+            <span class="highlight-stack">TypeScript</span>
+            <span class="highlight-stack">Redux Toolkit + RTK Query</span>
+            <span>Expo Router</span>
+            <span>SignalR</span>
+            <span>Azure OIDC</span>
+            <span>OpenSpec</span>
+        </div>
+        <div class="project-desc lang-ru">
+            <strong>CoachEye</strong> — AI-платформа спортивной аналитики вокруг Athlete Digital Twin: теннис собирается не из «роликов», а из Tennis Shot Events (SmartCourt, телефон, видео, wearables) в живую модель техники, тактики, нагрузки и развития, с объяснимым коучингом Rafa поверх фактов, паттернов и планов. Технически это кроссплатформенный клиент <strong>Expo / React Native</strong> (iOS, Android, Web) на TypeScript: Expo Router, Redux Toolkit и RTK Query к REST, SignalR для live-сессии и корта, Azure OIDC, свой дизайн-система из Figma.
+            <ul>
+                <li>Я frontend-инженер этого клиента: довожу продуктовые PBI из Azure DevOps и Figma до продакшена на всех трёх платформах</li>
+                <li>Работаю с To-Do, live Session / Shot Events, Court Twin, сегментами тренировки, realtime-синк Today</li>
+                <li>Работаю в spec-driven цикле <strong>OpenSpec</strong> (контракт поведения и UX → реализация → QA → архив)</li>
+                <li>Без выдуманных API и с обязательной тройной платформой</li>
+            </ul>
+        </div>
+        <div class="project-desc lang-en">
+            <strong>CoachEye</strong> — AI sports analytics platform built around Athlete Digital Twin: tennis is assembled not from "highlights", but from Tennis Shot Events (SmartCourt, phone, video, wearables) into a living model of technique, tactics, load, and development, with explainable Rafa coaching on top of facts, patterns, and plans. Technically, this is a cross-platform <strong>Expo / React Native</strong> client (iOS, Android, Web) in TypeScript: Expo Router, Redux Toolkit, and RTK Query to REST, SignalR for live sessions and court, Azure OIDC, and a custom design system from Figma.
+            <ul>
+                <li>I'm the frontend engineer of this client: delivering product PBIs from Azure DevOps and Figma to production across all three platforms</li>
+                <li>Working with To-Do, live Session / Shot Events, Court Twin, training segments, realtime Today sync</li>
+                <li>Working in a spec-driven <strong>OpenSpec</strong> cycle (behavior & UX contract → implementation → QA → archive)</li>
+                <li>No fake APIs and mandatory triple-platform support</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kids Academy Classroom -->
+    <div class="project">
+        <div class="project-header">
+            <div>
+                <span class="project-name">Kids Academy Classroom</span>
+                <span class="project-role"> · Lead Frontend Engineer</span>
+            </div>
+            <span class="project-period">Янв 2025 – Ноя 2025 / Jan 2025 – Nov 2025</span>
+        </div>
+        <div class="project-stack">
+            <span class="highlight-stack">React</span>
+            <span class="highlight-stack">TypeScript</span>
+            <span class="highlight-stack">Next.js</span>
+            <span>Redux Toolkit</span>
+            <span>Vercel</span>
+            <span>Braintree</span>
+        </div>
+        <div class="project-desc lang-ru">
+            <strong>Платформа для учителей с 7000+ заданий</strong> — рабочие листы, видео, игры, отслеживание прогресса.
+            <ul>
+                <li>Руководил фронтенд-разработкой от концепции до релиза</li>
+                <li>Спроектировал архитектуру на <strong>React + TypeScript + Redux Toolkit</strong></li>
+                <li>Интегрировал <strong>Braintree Drop-in UI</strong> для приёма платежей (PCI-комплаенс)</li>
+                <li>Настроил деплой и инфраструктуру на <strong>Vercel</strong></li>
+            </ul>
+        </div>
+        <div class="project-desc lang-en">
+            <strong>Teacher platform with 7,000+ activities</strong> — worksheets, videos, games, progress tracking.
+            <ul>
+                <li>Led frontend development from concept to production</li>
+                <li>Designed core architecture with <strong>React + TypeScript + Redux Toolkit</strong></li>
+                <li>Integrated <strong>Braintree Drop-in UI</strong> for PCI-compliant payment processing</li>
+                <li>Configured deployment and infrastructure on <strong>Vercel</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kids Academy -->
+    <div class="project">
+        <div class="project-header">
+            <div>
+                <span class="project-name"><a href="http://kidsacademy.mobi/" target="_blank">Kids Academy</a></span>
+                <span class="project-role"> · Senior Software Engineer</span>
+            </div>
+            <span class="project-period">Янв 2019 – Июн 2025 / Jan 2019 – Jun 2025</span>
+        </div>
+        <div class="project-stack">
+            <span>React</span><span>JavaScript</span><span>GraphQL</span><span>jQuery</span>
+            <span>Webpack</span><span>SCSS</span><span>Node.js</span><span>AWS</span>
+        </div>
+        <div class="project-desc lang-ru">
+            <strong>E-learning платформа для Pre-K – Grade 3</strong> — 4000+ интерактивных занятий.
+            <ul>
+                <li>Руководил командой разработчиков: планирование, код-ревью, наставничество</li>
+                <li>Разработал личный кабинет, каталог с фильтрацией, систему гифт-карт, авторизацию</li>
+                <li>Оптимизировал производительность: lazy loading, минификация, сокращение API-запросов</li>
+                <li>Внедрил стандарты качества: код-ревью в GitLab, тестирование на staging</li>
+                <li>Создал <strong>AI-генератор заданий</strong> (тесты, рабочие листы, игры)</li>
+            </ul>
+        </div>
+        <div class="project-desc lang-en">
+            <strong>E-learning platform for Pre-K – Grade 3</strong> — 4,000+ interactive activities.
+            <ul>
+                <li>Led a team of developers: task planning, code reviews, mentoring</li>
+                <li>Built personal account, activity catalog with filtering, gift card system, authentication</li>
+                <li>Optimized performance: lazy loading, minification, reduced API calls</li>
+                <li>Implemented coding standards, mandatory code reviews, staging testing</li>
+                <li>Created <strong>AI-powered activity generator</strong> (quizzes, worksheets, games)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Learn Like Nastya -->
+    <div class="project">
+        <div class="project-header">
+            <div>
+                <span class="project-name">Learn Like Nastya</span>
+                <span class="project-role"> · Software Engineer</span>
+            </div>
+            <span class="project-period">Окт 2021 – Янв 2022 / Oct 2021 – Jan 2022</span>
+        </div>
+        <div class="project-stack">
+            <span>Next.js</span><span>JavaScript</span><span>LESS/SCSS</span><span>Django REST</span>
+            <span>Vercel</span><span>Node.js</span><span>PostgreSQL</span>
+        </div>
+        <div class="project-desc lang-ru">
+            <strong>Serverless-приложение для дошкольников</strong> — анимации, игры, адаптивное обучение.
+            <ul>
+                <li>Разработал адаптивные интерфейсы с анимациями для детей</li>
+                <li>Интегрировал универсальную платёжную систему (карты, PayPal, Apple Pay)</li>
+                <li>Оптимизировал бандл через code splitting и lazy loading</li>
+            </ul>
+        </div>
+        <div class="project-desc lang-en">
+            <strong>Serverless educational app for preschoolers</strong> — animations, games, adaptive learning.
+            <ul>
+                <li>Developed responsive interfaces with engaging animations for children</li>
+                <li>Integrated unified payment system (cards, PayPal, Apple Pay)</li>
+                <li>Optimized bundle via code splitting and lazy loading</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GoPanache -->
+    <div class="project">
+        <div class="project-header">
+            <div>
+                <span class="project-name">GoPanache</span>
+                <span class="project-role"> · Software Engineer</span>
+            </div>
+            <span class="project-period">Фев 2018 – Дек 2018 / Feb 2018 – Dec 2018</span>
+        </div>
+        <div class="project-stack">
+            <span>React/Redux</span><span>Next.js</span><span>SCSS</span><span>REST API</span>
+        </div>
+        <div class="project-desc lang-ru">
+            <strong>B2B-платформа для управления бизнесом</strong> — расписание, платежи, POS, e-commerce.
+            <ul>
+                <li>Разработал интерактивный календарь с drag-and-drop</li>
+                <li>Создал переиспользуемые UI-компоненты (пикер времени, модальные окна, динамические формы)</li>
+                <li>Проводил кросс-браузерное и адаптивное тестирование</li>
+            </ul>
+        </div>
+        <div class="project-desc lang-en">
+            <strong>All-in-one business management platform</strong> — scheduling, payments, POS, e-commerce.
+            <ul>
+                <li>Developed interactive calendar with drag-and-drop functionality</li>
+                <li>Built reusable UI components (time picker, modals, dynamic forms)</li>
+                <li>Conducted cross-browser and responsive testing</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Early Projects -->
+    <div class="project">
+        <div class="project-header">
+            <div>
+                <span class="project-name lang-ru">Различные коммерческие проекты</span>
+                <span class="project-name lang-en">Various Commercial Projects</span>
+                <span class="project-role"> · Frontend Developer</span>
+            </div>
+            <span class="project-period">2015 – 2018</span>
+        </div>
+        <div class="project-stack">
+            <span>JavaScript</span><span>jQuery</span><span>OctoberCMS</span>
+            <span>PHP</span><span>MySQL</span><span>HTML5/CSS3</span><span>Gulp</span>
+        </div>
+        <div class="project-desc lang-ru">
+            <strong>WE BRIDGE, A-Renda, 115.минск, Lovata, HostForWeb, 2doc, Jurist.by</strong> и другие.
+            <ul>
+                <li>Разработка фронтенда для корпоративных сайтов, маркетплейсов и городских порталов</li>
+                <li>Кастомизация тем OctoberCMS, интеграция платёжных шлюзов</li>
+                <li>Оптимизация ассетов и адаптивная вёрстка с Gulp</li>
+            </ul>
+        </div>
+        <div class="project-desc lang-en">
+            <strong>WE BRIDGE, A-Renda, 115.минск, Lovata, HostForWeb, 2doc, Jurist.by</strong> and others.
+            <ul>
+                <li>Built frontends for corporate websites, marketplaces, and city service portals</li>
+                <li>Customized OctoberCMS themes and integrated payment gateways</li>
+                <li>Asset optimization and responsive layouts with Gulp</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== EDUCATION ===== -->
+    <h2 class="lang-ru">Образование</h2>
+    <h2 class="lang-en">Education</h2>
+    <p class="lang-ru">
+        <strong>Минский инновационный университет (МИУ)</strong><br>
+        Бакалавр прикладных наук · Информационные системы и технологии
+    </p>
+    <p class="lang-en">
+        <strong>Minsk Innovation University (MIU)</strong><br>
+        Bachelor of Applied Science · Information Systems and Technologies
+    </p>
+
+    <!-- ===== CONTACT ===== -->
+    <div class="contact-bar">
+        <a href="mailto:ivanauchynnikau@gmail.com">✉️ ivanauchynnikau@gmail.com</a>
+        <a href="https://t.me/ivanobivan" target="_blank">💬 Telegram: @ivanobivan</a>
+        <a href="#" class="btn lang-ru">📄 Скачать PDF</a>
+        <a href="#" class="btn lang-en">📄 Download PDF</a>
+    </div>
+
+    <div class="footer">
+        © 2026
+    </div>
+
+</div>
+
+<script>
+    // ===== ЯЗЫКОВОЙ ПЕРЕКЛЮЧАТЕЛЬ =====
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.dataset.lang;
+            document.body.className = 'lang-' + lang;
+            document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
+
+</body>
 </html>
